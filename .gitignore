@@ -1,0 +1,22 @@
+# Visual Studio settings folder 
+.vs/
+
+# Output folders for build artifacts
+bin/
+obj/
+
+# NuGet package files
+packages/
+
+# User-specific settings files
+*.user
+*.suo
+
+# Cache and temporary files
+*.cache
+*.log
+
+# Other artifacts
+*.pdb
+*.exe
+*.dll
