@@ -1,0 +1,12 @@
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\bin\Debug\ProjectTracker.exe.config
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\bin\Debug\ProjectTracker.exe
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\bin\Debug\ProjectTracker.pdb
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\bin\Debug\MaterialSkin.dll
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.csproj.AssemblyReference.cache
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.RegistrationForm.resources
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.Properties.Resources.resources
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.csproj.GenerateResource.cache
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.csproj.CoreCompileInputs.cache
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.csproj.CopyComplete
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.exe
+C:\FOR GitHub\TaskManagementProject\ProjectTracker\ProjectTracker\obj\Debug\ProjectTracker.pdb
