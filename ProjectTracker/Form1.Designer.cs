@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.userNameTextBox = new MaterialSkin.Controls.MaterialTextBox2();
             this.userNameLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.eMailTextBox = new MaterialSkin.Controls.MaterialTextBox2();
             this.eMailLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.passwordlTextBox = new MaterialSkin.Controls.MaterialTextBox2();
+            this.passwordTextBox = new MaterialSkin.Controls.MaterialTextBox2();
             this.passwordLabel = new MaterialSkin.Controls.MaterialLabel();
             this.signUpButton = new MaterialSkin.Controls.MaterialButton();
             this.signInButton = new MaterialSkin.Controls.MaterialButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.togglePasswordVisibility = new MaterialSkin.Controls.MaterialCheckbox();
+            this.registerLink = new System.Windows.Forms.LinkLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,15 +84,6 @@
             this.userNameLabel.TabIndex = 1;
             this.userNameLabel.Text = "Username";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ProjectTracker.Properties.Resources.pngegg__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(727, 344);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(515, 514);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // eMailTextBox
             // 
             this.eMailTextBox.AnimateReadOnly = false;
@@ -129,33 +124,33 @@
             this.eMailLabel.TabIndex = 5;
             this.eMailLabel.Text = "E-Mail";
             // 
-            // passwordlTextBox
+            // passwordTextBox
             // 
-            this.passwordlTextBox.AnimateReadOnly = false;
-            this.passwordlTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.passwordlTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.passwordlTextBox.Depth = 0;
-            this.passwordlTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.passwordlTextBox.HideSelection = true;
-            this.passwordlTextBox.LeadingIcon = null;
-            this.passwordlTextBox.Location = new System.Drawing.Point(210, 358);
-            this.passwordlTextBox.MaxLength = 32767;
-            this.passwordlTextBox.MouseState = MaterialSkin.MouseState.OUT;
-            this.passwordlTextBox.Name = "passwordlTextBox";
-            this.passwordlTextBox.PasswordChar = '\0';
-            this.passwordlTextBox.PrefixSuffixText = null;
-            this.passwordlTextBox.ReadOnly = false;
-            this.passwordlTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.passwordlTextBox.SelectedText = "";
-            this.passwordlTextBox.SelectionLength = 0;
-            this.passwordlTextBox.SelectionStart = 0;
-            this.passwordlTextBox.ShortcutsEnabled = true;
-            this.passwordlTextBox.Size = new System.Drawing.Size(310, 48);
-            this.passwordlTextBox.TabIndex = 8;
-            this.passwordlTextBox.TabStop = false;
-            this.passwordlTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.passwordlTextBox.TrailingIcon = null;
-            this.passwordlTextBox.UseSystemPasswordChar = false;
+            this.passwordTextBox.AnimateReadOnly = false;
+            this.passwordTextBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.passwordTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.passwordTextBox.Depth = 0;
+            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.passwordTextBox.HideSelection = true;
+            this.passwordTextBox.LeadingIcon = null;
+            this.passwordTextBox.Location = new System.Drawing.Point(210, 358);
+            this.passwordTextBox.MaxLength = 32767;
+            this.passwordTextBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '\0';
+            this.passwordTextBox.PrefixSuffixText = null;
+            this.passwordTextBox.ReadOnly = false;
+            this.passwordTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.passwordTextBox.SelectedText = "";
+            this.passwordTextBox.SelectionLength = 0;
+            this.passwordTextBox.SelectionStart = 0;
+            this.passwordTextBox.ShortcutsEnabled = true;
+            this.passwordTextBox.Size = new System.Drawing.Size(310, 48);
+            this.passwordTextBox.TabIndex = 8;
+            this.passwordTextBox.TabStop = false;
+            this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.passwordTextBox.TrailingIcon = null;
+            this.passwordTextBox.UseSystemPasswordChar = false;
             // 
             // passwordLabel
             // 
@@ -188,6 +183,7 @@
             this.signUpButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.signUpButton.UseAccentColor = false;
             this.signUpButton.UseVisualStyleBackColor = true;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // signInButton
             // 
@@ -208,15 +204,61 @@
             this.signInButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.signInButton.UseAccentColor = false;
             this.signInButton.UseVisualStyleBackColor = true;
+            this.signInButton.Click += new System.EventHandler(this.signInButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ProjectTracker.Properties.Resources.pngegg__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(727, 344);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(515, 514);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // togglePasswordVisibility
+            // 
+            this.togglePasswordVisibility.AutoSize = true;
+            this.togglePasswordVisibility.Depth = 0;
+            this.togglePasswordVisibility.Location = new System.Drawing.Point(550, 369);
+            this.togglePasswordVisibility.Margin = new System.Windows.Forms.Padding(0);
+            this.togglePasswordVisibility.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.togglePasswordVisibility.MouseState = MaterialSkin.MouseState.HOVER;
+            this.togglePasswordVisibility.Name = "togglePasswordVisibility";
+            this.togglePasswordVisibility.ReadOnly = false;
+            this.togglePasswordVisibility.Ripple = true;
+            this.togglePasswordVisibility.Size = new System.Drawing.Size(35, 37);
+            this.togglePasswordVisibility.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.togglePasswordVisibility, "Show password\r\n");
+            this.togglePasswordVisibility.UseVisualStyleBackColor = true;
+            this.togglePasswordVisibility.CheckedChanged += new System.EventHandler(this.togglePasswordVisibility_CheckedChanged);
+            // 
+            // registerLink
+            // 
+            this.registerLink.AutoSize = true;
+            this.registerLink.Location = new System.Drawing.Point(59, 810);
+            this.registerLink.Name = "registerLink";
+            this.registerLink.Size = new System.Drawing.Size(241, 20);
+            this.registerLink.TabIndex = 13;
+            this.registerLink.TabStop = true;
+            this.registerLink.Text = "Don\'t have an account? Register";
+            this.registerLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLink_LinkClicked_1);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 200;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ShowAlways = true;
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1291, 901);
+            this.Controls.Add(this.registerLink);
+            this.Controls.Add(this.togglePasswordVisibility);
             this.Controls.Add(this.signInButton);
             this.Controls.Add(this.signUpButton);
-            this.Controls.Add(this.passwordlTextBox);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.eMailTextBox);
             this.Controls.Add(this.eMailLabel);
@@ -237,10 +279,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialTextBox2 eMailTextBox;
         private MaterialSkin.Controls.MaterialLabel eMailLabel;
-        private MaterialSkin.Controls.MaterialTextBox2 passwordlTextBox;
+        private MaterialSkin.Controls.MaterialTextBox2 passwordTextBox;
         private MaterialSkin.Controls.MaterialLabel passwordLabel;
         private MaterialSkin.Controls.MaterialButton signUpButton;
         private MaterialSkin.Controls.MaterialButton signInButton;
+        private MaterialSkin.Controls.MaterialCheckbox togglePasswordVisibility;
+        private System.Windows.Forms.LinkLabel registerLink;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
