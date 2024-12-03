@@ -78,7 +78,7 @@
             this.timerDisplayLabel.Depth = 0;
             this.timerDisplayLabel.Font = new System.Drawing.Font("Roboto Light", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.timerDisplayLabel.FontType = MaterialSkin.MaterialSkinManager.fontType.H2;
-            this.timerDisplayLabel.Location = new System.Drawing.Point(776, 486);
+            this.timerDisplayLabel.Location = new System.Drawing.Point(753, 485);
             this.timerDisplayLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.timerDisplayLabel.Name = "timerDisplayLabel";
             this.timerDisplayLabel.Size = new System.Drawing.Size(225, 72);
@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1139, 1221);
+            this.ClientSize = new System.Drawing.Size(1139, 1254);
             this.Controls.Add(this.showStatisticsButton);
             this.Controls.Add(this.timerDisplayLabel);
             this.Controls.Add(this.userLabel);
